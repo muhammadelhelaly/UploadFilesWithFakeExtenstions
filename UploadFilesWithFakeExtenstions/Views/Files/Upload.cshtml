@@ -1,0 +1,15 @@
+﻿@model UploadFilesFormViewModel
+
+@{ ViewData["Title"] = "Upload Files"; }
+
+<div class="card">
+    <div class="card-body">
+        <form method="post" asp-action="UploadFiles" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label asp-for="Files" class="form-label"></label>
+                <input type="file" asp-for="Files" class="form-control w-50" multiple />
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+</div>
